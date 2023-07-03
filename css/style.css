@@ -22,12 +22,31 @@ body {
   
   nav > ul {
     display: flex;
+    flex: 2;
+    font-size: 1rem;
+    /* font-weight: bold; */
+    font-family: "Roboto Mono", monospace;
     flex-flow: nowrap;
     width: 100%;
     list-style-type: none;
     justify-content: space-around;
     padding: 4rem 2rem ;
   }
+  nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav a{
+   
+      text-decoration: none;
+      text-align: center;
+      color: #000;
+      flex: 1;
+      transition: all 1s;
+      user-select: none;
+  }
+
   *{
     box-sizing: border-box;
   }
@@ -42,6 +61,7 @@ body {
 
   img {
     width: 100%;
+
   }
   
   .container {
@@ -103,6 +123,7 @@ body {
 }
    .container-two  img {
     width: 200px;
+    aspect-ratio: 1/1;
    }
 
    .container-two >div >div:nth-of-type(3) img {
@@ -117,3 +138,28 @@ body {
    
     font-family: 'Ysabeau Infant', sans-serif;
 }
+
+
+@media screen and (max-width :500px) {
+
+
+  nav> ul{
+    flex-direction:column;
+    /* align-items: flex-start; */
+  } 
+
+.container {
+  padding: 1rem 0.5 rem;
+  flex-direction: column;
+}
+.container > div:nth-of-type(1){
+  padding: 0.5rem;
+}
+
+.container-two > div{
+  flex-direction: column;
+  padding: 1rem 0.5rem;
+  gap: 1rem;
+}
+}
+  
