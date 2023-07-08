@@ -215,6 +215,11 @@ body {
 .container-four>div>div {
   display: flex;
 }
+
+.container-four:nth-of-type(1) >div {
+flex-direction: row-reverse;
+}
+
 .container-four>div{
 gap: 8rem;
 padding: 1rem 4rem;
